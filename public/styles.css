@@ -110,18 +110,53 @@ body {
   font-weight: 500;
 }
 
-.location {
+.contact {
   text-align: center;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  border-top: 3px solid var(--black);
+}
+
+.contact-logo img {
+  width: 20rem;
+  margin-left: 2rem;
+}
+
+.contact-list-container {
+  display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
+}
+
+.contact-list-container ul {
+  margin-left: 1rem;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  margin: 1.4rem 1.4rem 1.4rem -0.6rem;
+  text-align: left;
+}
+
+.contact-list i {
+  margin: 0 0.6rem 0 0;
+  font-size: 1.2rem;
+  color: var(--pale);
+  width: 2rem;
+  text-align: center;
 }
 
 .header-location {
   color: var(--pale);
   font-size: 2.6rem;
-  margin: 1.6rem 0 1.6rem 0;
+  margin: 1.6rem 0 0rem 0;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -139,7 +174,7 @@ body {
   font-size: 0.8rem;
 }
 
-.contact {
+.gallery {
   text-align: center;
   display: flex;
   align-items: center;
@@ -155,8 +190,12 @@ span {
   color: var(--green);
 }
 
+a {
+  text-decoration: none;
+}
+
 hr {
-  width: 50%;
+  width: 70%;
   border: 0;
   height: 4px;
   background-image: linear-gradient(
@@ -167,16 +206,30 @@ hr {
   );
 }
 
+.hr-hide {
+  width: 50%;
+  border: 0;
+  height: 4px;
+  background-image: linear-gradient(
+    to right,
+    var(--grey),
+    var(--green),
+    var(--grey)
+  );
+  display: none;
+  margin: -3rem 0 0rem 0;
+}
+
 hr:hover {
   transition: all 0.5s ease-in-out;
   width: 100%;
 }
 
 .googlemaps {
-  width: 100%;
+  width: 20rem;
   height: 20rem;
-  border: none;
-  border-top: 2px solid var(--black);
+  border: 2px solid var(--black);
+  margin: 2rem;
 }
 
 .footer {
@@ -251,15 +304,34 @@ hr:hover {
     margin: 3rem 2.5rem;
   }
   .dog-image {
-    width: 50%;
-    margin-bottom: 3rem;
+    display: none;
   }
   .about-us {
     margin: 0 0;
   }
+  .googlemaps {
+    width: 100%;
+    height: 20rem;
+    border-right: none;
+    border-left: none;
+    margin: 1rem 0 0 0;
+  }
+  .contact {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* .contact-list-container {
+    margin: -2rem 3rem 0 2rem;
+  } */
+  .contact-logo img {
+    margin-left: 0;
+  }
 }
 
 @media only screen and (max-width: 600px) {
+  .scroll-nav {
+    display: none;
+  }
   .logo {
     width: 100%;
   }
@@ -281,6 +353,15 @@ hr:hover {
   }
   .content {
     margin: 1rem 0 2rem 0;
+  }
+  .contact {
+    flex-direction: column;
+  }
+  .contact-logo img {
+    margin-left: 0;
+  }
+  .contact-list-container {
+    margin: -2rem 0 1rem 0;
   }
 }
 
