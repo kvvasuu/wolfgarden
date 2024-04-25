@@ -14,6 +14,7 @@
       defer
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="script.js" defer></script>
     <title>WolfGarden</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -29,7 +30,7 @@
           <img
             class="dog-image"
             id="dog-image"
-            src="../assets/images/sheppard.jpg"
+            src="../assets/images/sheppard-dark.jpg"
           />
           <div class="about-us" id="about-us">
             <div class="header">O nas</div>
@@ -70,7 +71,28 @@
           </div>
         </div>
       </div>
-      <div class="gallery"></div>
+      <div class="gallery">
+        <div class="gallery-container">
+          <div class="mySlides">
+            <img src="../assets/images/gallery/1.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <img src="../assets/images/gallery/2.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <img src="../assets/images/gallery/3.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <img src="../assets/images/gallery/4.jpg" />
+          </div>
+
+          <a class="prev" id="prev">❮</a>
+          <a class="next" id="next">❯</a>
+        </div>
+      </div>
       <div class="contact">
         <div class="contact-logo">
           <img src="../assets/images/LogoBeige.png" />
@@ -87,9 +109,8 @@
               <i class="fa-solid fa-house"></i><span>64-930, Szydłowo 34</span>
             </li>
             <li>
-              <i class="fa-solid fa-phone"></i><span>+48 439 432 953</span>
+              <i class="fa-solid fa-phone"></i><span>+48 100 200 300</span>
             </li>
-
             <li>
               <i class="fa-brands fa-facebook"></i
               ><a href="" target="_blank"><span>Facebook</span></a>
@@ -115,6 +136,5 @@
         >
       </div>
     </div>
-    <script type="module" src="script.js"></script>
   </body>
 </html>

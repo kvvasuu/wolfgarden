@@ -174,18 +174,6 @@ body {
   font-size: 0.8rem;
 }
 
-.gallery {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  height: 20rem;
-  background-color: var(--beige);
-  border-top: 3px solid var(--black);
-}
-
 span {
   color: var(--green);
 }
@@ -229,7 +217,7 @@ hr:hover {
   width: 20rem;
   height: 20rem;
   border: 2px solid var(--black);
-  margin: 2rem;
+  margin: 2rem 2rem 2rem 0;
 }
 
 .footer {
@@ -286,6 +274,77 @@ hr:hover {
   color: rgba(224, 221, 202, 1);
 }
 
+/* SLIDEUP ANIMATION */
+
+.slideUp {
+  animation-name: slideUp;
+  animation-name: slideUp;
+  animation-duration: 1s;
+  animation-duration: 1s;
+  visibility: visible;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--beige);
+  border-top: 3px solid var(--black);
+}
+
+.gallery-container {
+  position: relative;
+  width: 100%;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: 30rem;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  width: auto;
+  margin: 3rem;
+  color: rgba(224, 221, 202, 1);
+  font-weight: bold;
+  font-size: 3rem;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  filter: drop-shadow(0 0 4px rgba(224, 221, 202, 0.8));
+  color: rgba(224, 221, 202, 1);
+}
+
 /* MEDIA */
 
 @media only screen and (max-width: 1000px) {
@@ -320,9 +379,6 @@ hr:hover {
     flex-wrap: wrap;
     justify-content: center;
   }
-  /* .contact-list-container {
-    margin: -2rem 3rem 0 2rem;
-  } */
   .contact-logo img {
     margin-left: 0;
   }
@@ -363,23 +419,22 @@ hr:hover {
   .contact-list-container {
     margin: -2rem 0 1rem 0;
   }
+
+  .prev,
+  .next {
+    margin: 3rem 1rem 3rem 1rem;
+    font-size: 2rem;
+  }
 }
 
-.slideUp {
-  animation-name: slideUp;
-  animation-name: slideUp;
-  animation-duration: 1s;
-  animation-duration: 1s;
-  visibility: visible;
+::-webkit-scrollbar {
+  width: 6px;
 }
 
-@keyframes slideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(70%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--green);
 }
