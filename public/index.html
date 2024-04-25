@@ -16,7 +16,7 @@
     ></script>
     <title>WolfGarden</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="node_modules\@splidejs\splide\dist\css\splide.min.css">
+    <link rel="stylesheet" href="../node_modules/@splidejs/splide/dist/css/splide-core.min.css">
   </head>
   <body>
     <a id="arrow-button" class="fa fa-angle-down scroll-nav"></a>
@@ -54,7 +54,17 @@
           </div>
           
         </div>
-        <div class="gallery"></div>
+        <div class="gallery">
+          <section class="splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">Slide 01</li>
+                <li class="splide__slide">Slide 02</li>
+                <li class="splide__slide">Slide 03</li>
+              </ul>
+            </div>
+          </section>
+        </div>
         <div class="contact">
           <div class="header-location">kontakt</div>
         </div>
@@ -66,6 +76,6 @@
       
       <div class="footer">&copy; Copyright 2024. All rights reserved. Powered by<a href="https://github.com/kvvasuu" target="_blank">&nbsp;Kvvasu</a></div>
     </div>
-    <script src="./script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
