@@ -11,6 +11,8 @@ html {
   margin: 0;
   background-color: var(--grey);
   scroll-behavior: smooth;
+  height: 100vh;
+  min-height: 100%;
 }
 
 body {
@@ -385,6 +387,10 @@ hr:hover {
 }
 
 @media only screen and (max-width: 600px) {
+  .home {
+    background-attachment: scroll;
+  }
+
   .scroll-nav {
     display: none;
   }
