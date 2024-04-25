@@ -21,7 +21,6 @@ function scrollCheck() {
   if (window.scrollY > 800) {
     arrow.classList.add("scroll-nav-bottom");
   }
-  console.log(window.scrollY);
 }
 window.onscroll = function () {
   scrollCheck();
