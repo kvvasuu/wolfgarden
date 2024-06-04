@@ -180,6 +180,18 @@ span {
   color: var(--green);
 }
 
+.phones {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.phones-numbers {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 a {
   text-decoration: none;
 }
